@@ -11,10 +11,10 @@ $doc = phpQuery::newDocument($amazon_page);
 $package = pq('div.prod.celwidget');
 for($i=0;$i<$package->length;$i++){
 	$amz_data[$i] = new man_info();
-	$tempname = $package->eq($i)->find('h3.newaps')->find('a')->find('span.lrg')->html();
+	$tempname = $package->eq($i)->find('h3.newaps')->find('a')->find('span.lrg')->text();
 	$tempname = trim($tempname);
 	if(mb_strlen($tempname, 'utf-8')>60){
-		$amz_data[$i]->name = mb_substr($tempname, 0, 36, 'UTF-8').'......';
+		$amz_data[$i]->name = mb_substr($tempname, 0, 60, 'UTF-8').'......';
 	}
 	else{
 		$amz_data[$i]->name = $tempname;	

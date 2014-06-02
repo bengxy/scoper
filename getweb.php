@@ -4,7 +4,7 @@
 	require('phpQuery.php');
 	$input = $_GET['con'];
 	$page = $_GET['page'];				//查询页码
-	echo 'this is page page: '.$page.'<br />';
+	
 ?>	
 <head>
 	<title>Scoper</title>
@@ -18,7 +18,7 @@
 		<div id="main">
 			<img src="image/logo_small.png" alt="logo_small.png">
 			<form id="main_form">
-				<input id ="text1" type="text" name="con"/>	
+				<input id ="text1" type="text" name="con" value="<?php echo $input;?>"/>	
 				<button class="tooltip medium blue pop" value=1 name='page'><i class ="icon-search"></i>Search</button>
 			</form>
 		</div>
@@ -84,35 +84,38 @@
 			</div>
 			<?php } ?>
 			<div id = "pagepick">
+			<form>
 				<?php
+					echo '<input type="hidden" value="'.$input.'" name="con">';
 					function displayend(){
 						echo '<span class="lose">...</span>';
-						echo '<button class="pickpage square medium" value=20>20</button>';
+						echo '<button name="page" class="pickpage square medium" value=20>20</button>';
 					}
 					function displayhead(){
-						echo '<button class="pickpage square medium" value=1>1</button>';
+						echo '<button name="page" class="pickpage square medium" value=1>1</button>';
 						echo '<span class="lose">...</span>';
 					}
 					if($page>3 && $page<18){
 						displayhead();
-						echo '<button class="pickpage square medium" value='.($page-1).'>'.($page-1).'</button>';
-						echo '<button class="pickpage square medium" value='.$page.'>'.$page.'</button>';
-						echo '<button class="pickpage square medium" value='.($page+1).'>'.($page+1).'</button>';
+						echo '<button name="page" class="pickpage square medium" value='.($page-1).'>'.($page-1).'</button>';
+						echo '<button name="page" class="pickpage square medium" value='.$page.'>'.$page.'</button>';
+						echo '<button name="page" class="pickpage square medium" value='.($page+1).'>'.($page+1).'</button>';
 						displayend();
 					}
 					else if($page<=3){
 						for($i=1;$i<5;$i++){
-							echo '<button class="pickpage square medium" value='.$i.'>'.$i.'</button>';
+							echo '<button name="page" class="pickpage square medium" value='.$i.'>'.$i.'</button>';
 						}
 						displayend();
 					}
 					else{
 						displayhead();
 						for($i=16;$i<21;$i++){
-							echo '<button class="pickpage square medium" value='.$i.'>'.$i.'</button>';
+							echo '<button name="page" class="pickpage square medium" value='.$i.'>'.$i.'</button>';
 						}
-					}
+					}	
 				?>
+			</form>	
 			</div>
 		</div>
 	<hr class="alt2"/>
