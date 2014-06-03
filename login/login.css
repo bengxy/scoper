@@ -1,0 +1,51 @@
+.top{
+	width: 100%;
+	height: 10%;
+}
+.centerline{
+	display: inline-block;
+
+	width: 100%;
+	height: 80%;
+}
+.showgraph{
+	
+}
+.logincontent{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #CCCCCC;
+	border-top-color: #66CCFF;
+	border-top-width: 2px;
+	width: 300px;
+	height: 300px;
+	float: right;
+	margin-right: 140px;
+	margin-top: 30px;
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+.formcont{
+	margin-top: 30px;
+}
+.inputbar{
+	margin-top: 10px;
+	width: 80%;
+}
+.error{
+	margin-top: 10px;
+	width: 80%;
+}
+#logbtn{
+	width:80%;
+	position: center;
+	margin-top: 30px;
+}
+.bottom{
+	
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+
+}
