@@ -43,9 +43,10 @@
 	margin-top: 30px;
 }
 .bottom{
-	
 	width: 100%;
 	bottom: 0;
 	position: absolute;
-
+}
+.notice.error{
+	display: none;
 }

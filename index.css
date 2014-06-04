@@ -1,0 +1,21 @@
+#topline{
+	width:110%;
+	height: 40px;
+	margin-left: -10px;
+	margin-top: -10px;
+	background-color: #AAEEFF;
+}
+#main_form{
+	text-align:center;
+	margin-top: 20px;
+}
+#text1{
+	width: 500px;
+}
+#logopic{
+	text-align:center;
+	margin-top: 100px;
+}
+a {
+	text-decoration:none;
+}

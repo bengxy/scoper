@@ -1,22 +1,22 @@
 <html>
 <meta http-equiv="content-type" content="text/html"  charset="utf-8" />
 <?php
-	require('phpQuery.php');
+	require('../phpQuery.php');
 	$input = $_GET['con'];
 	$page = $_GET['page'];				//查询页码
 	
 ?>	
 <head>
 	<title>Scoper</title>
-	<script type="text/javascript" src="KickStart/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="KickStart/js/kickstart.js"></script>
-	<link rel="stylesheet" href="KickStart/css/kickstart.css" media="all"/>
+	<script type="text/javascript" src="../KickStart/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="../KickStart/js/kickstart.js"></script>
+	<link rel="stylesheet" href="../KickStart/css/kickstart.css" media="all"/>
 	<link rel="stylesheet" href="top.css" media="all"/> 
 </head>
 <body>
 	<div id="wrapper">
 		<div id="main">
-			<img src="image/logo_small.png" alt="logo_small.png">
+			<img src="../image/logo_small.png" alt="logo_small.png">
 			<form id="main_form">
 				<input id ="text1" type="text" name="con" value="<?php echo $input;?>"/>	
 				<button class="tooltip medium blue pop" value=1 name='page'><i class ="icon-search"></i>Search</button>
