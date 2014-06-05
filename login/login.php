@@ -1,20 +1,13 @@
 <?php 
 ob_start();
 //check cookie
-if(isset($_COOKIE['username'])&&isset($_COOKIE['password'])){
-	$cookie_name = $_COOKIE['username'];
-	$cookie_passwd = $_COOKIE['password'];
-	
-}
-				
-
-
+session_start();
 ?>
 <html>
 <meta charset="utf-8"/>
 <head>
 	<link rel="stylesheet" href="../KickStart/css/kickstart.css" media="all"/>
-	<link rel="stylesheet" href="login.css" media="all"/>
+	<link rel="stylesheet" href="../css/login.css" media="all"/>
 	<script src="../KickStart/jquery-1.11.0.min.js"></script>
 	<script src="../KickStart/js/kickstart.js"></script>
 	<script src="login.js"></script>
@@ -24,6 +17,34 @@ if(isset($_COOKIE['username'])&&isset($_COOKIE['password'])){
 	echo $redirecturl; 
 	$name = $_POST['username'];
 	$passwd = $_POST['passwd'];
+	if(isset($_COOKIE['username'])&&isset($_COOKIE['password'])){
+		$cookie_name = $_COOKIE['username'];
+		$cookie_passwd = $_COOKIE['password'];
+		$DBhandler = mysql_connect('localhost:3306', 'root', '');
+		$everything = mysql_query('SELECT * FROM scopeDB.UserInfo WHERE UserName = "'.$cookie_name.'"');
+		if(mysql_num_rows($everything)>0){
+			$row =  mysql_fetch_array($everything);			
+			if($passwd == $row['passwd']){
+				$_SESSION['sess_name'] = $name;
+				$_SESSION['sess_passwd'] = $passwd;
+				if($redirecturl==null || $redirecturl == ""){
+					header('Location: http://localhost/~gaoben_pc/scoper/index.php');
+					exit();
+				}
+				else{
+					header('Location:'.$redirecturl);
+					exit();
+				}
+			}
+			else{
+				//TODO: ERROR
+			}
+		}
+		else{
+			//TODO: ERROR
+		}
+	}
+
 ?>
 	<div class="top"> first line
 	</div>
@@ -61,11 +82,9 @@ if(isset($_COOKIE['username'])&&isset($_COOKIE['password'])){
 					if($passwd == $row['passwd']){
 						echo '<script type="text/javascript">alert("cookie");</script>';
 						setcookie('username', $name, time()+3600, '/');
-						setcookie('password', $passwd, time()+3600, '/');
-						print_r($_COOKIE);
-						if(isset($_COOKIE['username'])) {
-							echo 'iseset';
-						}
+						setcookie('password', $passwd, time()+3600, '/');					
+						$_SESSION['sess_name'] = $name;
+						$_SESSION['sess_passwd'] = $passwd;
 						if($redirecturl==null || $redirecturl == ""){
 							header('Location: http://localhost/~gaoben_pc/scoper/index.php');
 							exit();

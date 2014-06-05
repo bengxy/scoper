@@ -1,18 +1,25 @@
+<?php
+	ob_start();
+	
+?>
 <html>
 <meta http-equiv="content-type" content="text/html"  charset="utf-8" />
-<?php
-	require('../phpQuery.php');
-	$input = $_GET['con'];
-	$page = $_GET['page'];				//查询页码
 	
-?>	
 <head>
 	<title>Scoper</title>
 	<script type="text/javascript" src="../KickStart/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="../KickStart/js/kickstart.js"></script>
 	<link rel="stylesheet" href="../KickStart/css/kickstart.css" media="all"/>
-	<link rel="stylesheet" href="top.css" media="all"/> 
+	<link rel="stylesheet" href="../css/mainpage.css" media="all"/> 
 </head>
+<?php
+	require('../tophead/tophead.php'); 
+	ob_end_flush();
+	require('../phpQuery.php');
+	$input = $_GET['con'];
+	$page = $_GET['page'];				//查询页码
+	
+?>
 <body>
 	<div id="wrapper">
 		<div id="main">

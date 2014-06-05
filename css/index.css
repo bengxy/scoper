@@ -1,10 +1,4 @@
-#topline{
-	width:110%;
-	height: 40px;
-	margin-left: -10px;
-	margin-top: -10px;
-	background-color: #AAEEFF;
-}
+@import url('tophead.css');
 #main_form{
 	text-align:center;
 	margin-top: 20px;
