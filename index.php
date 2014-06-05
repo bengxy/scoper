@@ -1,5 +1,6 @@
 <?php
 	ob_start();
+	//header("Content-Type: text/html; charset=utf-8");
 ?>
 <html>
 	<head>
@@ -13,7 +14,8 @@
 	</head>
 	<body>
 		<?php
-			require('tophead/tophead.php'); 
+			$hisitem = array();
+			require('tophead.php'); 
 			ob_end_flush();
 		?>
 		<div id="logopic"> <img src="image/logo.png" alt="logo"/>
@@ -22,5 +24,19 @@
 			<input id ="text1" type="text" name="con"/>	
 			<button class="tooltip medium blue pop" value = 1 name="page"><i class ="icon-search"></i>Search</button>
 		</form>
+		<div class="history">
+			<p class="his">历史搜索：</p>
+			<div class="codebar">
+				<?php
+					for($i=0;$i<$total;$i++){
+				?>
+					<code>
+					
+					<?php echo $hisitem[$i]?>
+					</code>
+				<?php }
+				?>
+			</div>
+		</div>
 	</body>
 </html>

@@ -13,12 +13,11 @@
 	<link rel="stylesheet" href="../css/mainpage.css" media="all"/> 
 </head>
 <?php
-	require('../tophead/tophead.php'); 
+	$input = $_GET['con'];
+	$page = $_GET['page'];
+	require('tophead.php'); 
 	ob_end_flush();
 	require('../phpQuery.php');
-	$input = $_GET['con'];
-	$page = $_GET['page'];				//查询页码
-	
 ?>
 <body>
 	<div id="wrapper">
@@ -47,8 +46,8 @@
 			}	
 			include ('get_taobao.php');
 			
-		//	include ('get_amazon.php');
-			$amz_data = [];
+			include ('get_amazon.php');
+		//	$amz_data = [];
 			$merged = array_merge($amz_data, $tb_data);
 			function obj_arr_cmp($a, $b){
 				if(intval($a->price) == intval($b->price)){

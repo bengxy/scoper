@@ -12,21 +12,25 @@ session_start();
 	<script src="../KickStart/js/kickstart.js"></script>
 	<script src="login.js"></script>
 </head>
-<?php 
+<?php
+	require('../phpQuery.php');
 	$redirecturl = $_GET['redirect'];
-	echo $redirecturl; 
 	$name = $_POST['username'];
 	$passwd = $_POST['passwd'];
+	
 	if(isset($_COOKIE['username'])&&isset($_COOKIE['password'])){
+
 		$cookie_name = $_COOKIE['username'];
 		$cookie_passwd = $_COOKIE['password'];
 		$DBhandler = mysql_connect('localhost:3306', 'root', '');
 		$everything = mysql_query('SELECT * FROM scopeDB.UserInfo WHERE UserName = "'.$cookie_name.'"');
 		if(mysql_num_rows($everything)>0){
 			$row =  mysql_fetch_array($everything);			
-			if($passwd == $row['passwd']){
-				$_SESSION['sess_name'] = $name;
-				$_SESSION['sess_passwd'] = $passwd;
+			if($cookie_passwd == $row['passwd']){
+				$_SESSION['sess_name'] = $cookie_name;
+				$_SESSION['sess_passwd'] = $cookie_passwd;
+				echo $name;
+				echo $passwd;
 				if($redirecturl==null || $redirecturl == ""){
 					header('Location: http://localhost/~gaoben_pc/scoper/index.php');
 					exit();
@@ -46,11 +50,14 @@ session_start();
 	}
 
 ?>
-	<div class="top"> first line
+	<div class="top"> 
+		<img src="../image/logo_small.png" alt="logo_small.png">
 	</div>
 	<div class="centerline">
 		
-		<div class="showgraph">left</div>
+		<div class="showgraph">
+			<!-- add something like picture or flash -->
+		</div>
 		<div class="logincontent">
 			<p>登陆</p>
 			<div class="notice error" id="usererror"><i class="icon-remove-sign icon-small"></i>
@@ -103,5 +110,5 @@ session_start();
 			?>
 		</div>
 	</div>
-	<div class="bottom">bottom</div>
+
 </html>

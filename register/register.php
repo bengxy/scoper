@@ -25,7 +25,7 @@ if($username!=null){
 		<input class="userbar" id="username" placeholder="输入用户名" type="text" name="username" onFocus="resetname();"/>
 		<span>[a-z][A-Z][0-9]</span>
 		<br />
-		<input class="userbar" id="passwd" placeholder="输入密码" type="text" name="passwd" onFocus="resetpasswd();"/>
+		<input class="userbar" id="passwd" placeholder="输入密码" type="password" name="passwd" onFocus="resetpasswd();"/>
 		<br />
 		<input type="hidden" value=<?php echo $redirecturl;?> name="redirecturl">
 		<input class="userbar" id="regbtn" type="submit" value="注册"/>

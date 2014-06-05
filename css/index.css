@@ -13,3 +13,17 @@
 a {
 	text-decoration:none;
 }
+.history{
+	text-align: center;
+	margin-top: 60px;
+}
+.codebar{
+	margin: 20px;
+}
+code{
+	margin: 10px;
+}
+.his{
+	font-size: 10px;
+	margin-bottom: 10px;
+}
