@@ -4,10 +4,11 @@
 	text-align: left;
 }
 .userbar{
-    text-align: center;
-    margin-top: 10%;
+	width: 200px;
+	margin-top: 10px;
 }
-.userbar{
+.error{
+	width: 200px;
 	margin-top: 10px;
 }
 #regbtn{

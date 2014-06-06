@@ -96,3 +96,6 @@ button.pickpage{
 span.lose{
 	margin-left: 20;
 }
+hr.display{
+	display: none;
+}

@@ -12,7 +12,7 @@
 		$i = 0;
 		while($row = mysql_fetch_array($everything)){
 			$hisitem[$i] = $row['ShopName'];
-			echo $hisitme[$i];
+			//echo $hisitme[$i];
 			$i++;
 		}
 		?>
@@ -22,7 +22,7 @@
 	else{ 
 		?>
 		<a class="account" href="login/login.php?&redirect=<?php echo $actual_link;?>">登陆</a> 	
-		<a class="account" href="register/register.php?&redirect=<?php echo $actual_link;?>">注册</a> 	
+		<a class="account" href="register/register.php">注册</a> 	
 	<?php
 	}
 ?>

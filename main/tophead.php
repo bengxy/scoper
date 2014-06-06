@@ -14,8 +14,8 @@
 		<a class="account" href="../logout/logout.php?&redirect=<?php echo $actual_link;?>">退出</a>
 	<?php }
 	else{ ?>
-		<a class="account" href="login/login.php?&redirect=<?php echo $actual_link;?>">登陆</a> 	
-		<a class="account" href="register/register.php?&redirect=<?php echo $actual_link;?>">注册</a> 	
+		<a class="account" href="../login/login.php?&redirect=<?php echo $actual_link;?>">登陆</a> 	
+		<a class="account" href="../register/register.php">注册</a> 	
 	<?php
 	}
 ?>

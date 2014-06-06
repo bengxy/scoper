@@ -89,6 +89,7 @@
 				</div>
 			</div>
 			<?php } ?>
+			<hr class="alt2 display"/>
 			<div id = "pagepick">
 			<form>
 				<?php

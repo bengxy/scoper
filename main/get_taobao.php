@@ -17,7 +17,7 @@ for($i=0;$i<$package->length;$i++){
 //TODO: 字符串的截取  缩短
 	$tempname = trim($tempname);
 	if(mb_strlen($tempname, 'UTF-8')>60){		
-		$tb_data[$i]->name = mb_substr($tempname, 0, 60, 'UTF-8').'......';
+		$tb_data[$i]->name = mb_substr($tempname, 0, 40, 'UTF-8').'......';
 	}
 	else{
 		$tb_data[$i]->name = $tempname;
