@@ -60,11 +60,11 @@
 			?>
 			<div class="col_3">
 				<div class ="item_pic">
-					<?php echo '<a href="'.$key->refer.'" target="blank"><img src="'.$key->pic_url.'"></img></a>'; ?>
+					<?php echo '<a href="'.$key->refer.'" target="_blank"><img src="'.$key->pic_url.'"></img></a>'; ?>
 				</div>
 				<div class="item_info">
 					<div class="item_name">
-						<p class="Name_p"><?php echo '<a href="'.$key->refer.'"target="blank">'.$key->name.'</a>'; ?></p>
+						<p class="Name_p"><?php echo '<a href="'.$key->refer.'"target="_blank">'.$key->name.'</a>'; ?></p>
 					</div>
 					<div>
 						<div class="price">

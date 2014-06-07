@@ -1,15 +1,39 @@
-scoper
+scoper v1.0
 ======
-<ui>Scoper alpha version.</ui>
-<ui>Authored by bengxy.</ui>
+
+<ui>Scoper beta version.</ui> &nbsp;
+<ui>Authored by @bengxy.</ui>
 
 
 A search engine get result from [taobao](http://www.taobao.com") and [amazon](http://www.amazon.cn)
 
+Merge and sort the result and give you the cheapest choice.
 
+User can register and loggin, the system will record the elements user searched for.
 
-Developed  under Windows 8 by Apache PHP MySQL.
-Work well in IE 11   Chrome    Safari
+-----
 
+Developed under <b>MacOS 10.9.3</b> by
 
+<b> 
+Apache	2.2.26 <br/>
+PHP	5.4.24<br/>
+MySQL 5.6.19<br/>
+</b>
 
+Works well in<br/>
+<b>
+IE 10 and upper<br/>
+Chrome<br/>
+FireFox<br />
+Safari<br/>
+</b>
+
+Some bugs in lower version of IE 10 like CSS not work.
+
+----
+
+Some thing <b>TODO</b> next:</br>
+<p><ui>and the md5 to password.</ui><br/>
+<ui>give result users may like</ui>
+</p>
