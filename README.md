@@ -1,5 +1,12 @@
 scoper v1.0
 ======
+###中文说明
+scoper1.0版本
+
+sql文件夹下存放着mysql脚本，可生成测试数据库。<br/>
+把文件放到服务器下，即可访问。
+
+###English Version （Readme）
 
 <ui>Scoper beta version.</ui> &nbsp;
 <ui>Authored by @bengxy.</ui>
