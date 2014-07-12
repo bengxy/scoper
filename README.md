@@ -32,13 +32,13 @@ MySQL 5.6.19<br/>
 
 Works well in<br/>
 <b>
-IE 10 and upper<br/>
+IE 10 or more<br/>
 Chrome<br/>
 FireFox<br />
 Safari<br/>
 </b>
 
-Some bugs in lower version of IE 10 like CSS not work.
+Some bugs appear in lower version than IE 10 like CSS not work.
 
 ----
 
